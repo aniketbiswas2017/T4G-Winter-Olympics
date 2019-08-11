@@ -25,8 +25,6 @@ export class FavoriteListComponent implements OnInit {
   @Input()
   public favData;
   public dataRow = [];
-  
-  
 
   constructor(private _olympicService: OlympicService) { 
     const x = JSON.parse(localStorage.getItem('fav'))
