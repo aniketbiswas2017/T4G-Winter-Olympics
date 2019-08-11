@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule, HttpResponse} from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpResponse } from '@angular/common/http';
 import { Olympics } from './model/olympic.model';
 import { Observable } from 'rxjs';
 
@@ -14,7 +14,7 @@ export class OlympicService {
 
   constructor(private http: HttpClient) { }
 
-  getTable() : Observable<Olympics[]>{
+  getTable(): Observable<Olympics[]> {
     return this.http.get<Olympics[]>(this.olympicsUrl);
   }
 }

@@ -15,5 +15,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-// Creating an array of all ROuting components and export it for AppModule (to avoid duplication and redundancy)
+// Creating an array of all ROuting components and export it to AppModule (to avoid duplication and redundancy)
 export const routingComponents = [CountryListComponent, FavoriteListComponent];

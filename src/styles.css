@@ -1,110 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
-html { 
+html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 .carousel {
     top: 26px;
     left: 7%;
-    width:93%;
-    padding:0px 70px 0px 70px;
+    width: 93%;
+    padding: 0px 70px 0px 70px;
 }
 
 tr.spaceUnder>td {
     padding-bottom: 1em;
-  }
+}
+
 .axis text {
     font: 12px sans-serif;
-  }
-  
-  .axis path,
-  .axis line {
+}
+
+.axis path,
+.axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
-  }
-  
-  .bar {
+}
+
+.bar {
     fill: steelblue;
     fill-opacity: .9;
-  }
-  .bar:hover{
-      fill: black;
-    }
-  
-  .x.axis path {
+}
+
+.bar:hover {
+    fill: black;
+}
+
+.x.axis path {
     display: none;
-  }
-  
-  label {
+}
+
+label {
     position: relative;
     top: 10px;
     left: 100%;
-  }
-  
+}
+
 img {
     width: 50px;
     height: 30px;
-  }
-  div.heading {
+}
+
+div.heading {
     text-align: center;
-  }
+}
+
 .container {
     left: 200px;
 }
+
 .mat-column-flag {
     flex: 0 0 150px;
-  }
-  .mat-column-name {
+}
+
+.mat-column-name {
     flex: 0 0 200px;
-  }
-  .mat-column-medals {
+}
+
+.mat-column-medals {
     flex: 0 0 100px;
-  }
-  .mat-column-silver {
+}
+
+.mat-column-silver {
     flex: 0 0 100px;
-  }
-  .mat-column-bronze {
+}
+
+.mat-column-bronze {
     flex: 0 0 100px;
-  }
-  .mat-column-total {
+}
+
+.mat-column-total {
     flex: 0 0 100px;
-  }
+}
+
 .mat-sort-header-container {
     align-items: center;
-  }
-  th.mat-sort-header-sorted {
+}
+
+th.mat-sort-header-sorted {
     color: black;
-  }
-  .table {
+}
+
+.table {
     position: relative;
     left: 280px;
     top: 50px;
     width: 100%;
     height: 200%;
-  }
-  div.table {
-        position: relative;
-        left: 280px;
-        top: 50px;
-        width: 60%;
-        height: 200%;
-  }
-  
-  th.mat-sort-header-sorted {
+}
+
+div.table {
+    position: relative;
+    left: 280px;
+    top: 50px;
+    width: 60%;
+    height: 200%;
+}
+
+th.mat-sort-header-sorted {
     color: black;
-  }
+}
+
 body {
     margin: 0;
     font-family: Century Gothic, sans-serif;
 }
-  h1 {color: rgb(236, 236, 236);}
 
-  h2 {color: rgb(0, 0, 0);
+h1 {
+    color: rgb(236, 236, 236);
 }
-  
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
 .sidebar {
     font-size: 120%;
     width: 160px;
@@ -112,45 +131,49 @@ body {
     position: fixed;
     height: 100%;
     overflow: auto;
-    top: 50px;
-  }
-  
-  .sidebar a {
+    top: 51px;
+}
+
+.sidebar a {
     display: block;
     color: black;
     padding: 15px;
     text-decoration: none;
-  }
-   
-  .sidebar a.active {
-    background-color:  black;
+}
+
+.sidebar a.active {
+    background-color: black;
     color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
+}
+
+.sidebar a:hover:not(.active) {
     background-color: #555;
     color: white;
-  }
-  
-  div.content {
+}
+
+div.content {
     margin-left: 200px;
     padding: 1px 16px;
     height: 1000px;
-  }
-  
-  @media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 700px) {
     .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  @media screen and (max-width: 400px) {
     .sidebar a {
-      text-align: center;
-      float: none;
+        float: left;
     }
-  }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
