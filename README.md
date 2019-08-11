@@ -29,7 +29,7 @@ Shut it down manually with `Ctrl-C`.
 
 ### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. If port is already in use, run 'ng serve --port' or 'ng serve --port <port number of your choice>'.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. If port is already in use, run `ng serve --port` or `ng serve --port <port number of your choice>`.
 
 ### Code scaffolding
 
