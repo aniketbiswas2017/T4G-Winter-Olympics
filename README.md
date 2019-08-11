@@ -11,12 +11,17 @@ git clone https://github.com/aniketbiswas2017/T4G-Winter-Olympics
 cd T4G-Winter-Olympics
 ```
 
+### Install Node
+
+Download the Node.js source code or a pre-built installer for your platform from https://nodejs.org/en/download/
+
 ### Install npm packages
 
 Install the `npm` packages described in the `package.json` and verify that it works:
 
 ```shell
 npm install
+npm install -g @angular/cli
 npm start
 ```
 
