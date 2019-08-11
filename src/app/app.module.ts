@@ -1,18 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule, MatSortModule } from '@angular/material';
+import { OlympicService } from './olympic.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {Sort} from '@angular/material/sort';
+import { CdkTableModule } from '@angular/cdk/table';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatSortModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+    CdkTableModule
   ],
-  providers: [],
+  providers: [OlympicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,56 @@
+<div class = "heading"><h3 *ngIf="fMessage">
+    Click on any country to save it to Favorites</h3></div>
+<div class="container" *ngIf="showMessage">
+    <div class="col-md-10 col-md-offset-1">
+        <h2></h2>
+        <div class="alert alert-info center-block alert-dismissible fade in text-center" role = "alert">
+            <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close" >&times;</a>
+          The country has been added to <strong>Favorites!</strong> Check your list of <a routerLink="/favorites" class="alert-link">favorite countries</a>.
+        </div>
+    </div>
+</div>  
+<div class="container" *ngIf="msgDupl">
+        <div class="col-md-10 col-md-offset-1">
+            <h2></h2>
+            <div class="alert alert-info center-block alert-dismissible fade in text-center" role = "alert">
+                <a (click)="onClose()" class="close" data-dismiss="alert" aria-label="close" >&times;</a>
+              The country is already in your <strong>Favorites!</strong> Check your list of <a routerLink="/favorites" class="alert-link">favorite countries</a>.
+            </div>
+        </div>
+    </div>     
+<div class="table"> 
+    <table width="850" mat-table [dataSource] = "dataSource" class="mat-elevation-z8" matSort matSortActive = "name" matSortDirection = "asc" matSortDisableClear>
+        <ng-container matColumnDef="flag">
+            <mat-header-cell *matHeaderCellDef>Country</mat-header-cell>
+            <mat-cell *matCellDef="let olympics"> <img [src]="olympics.flag"/></mat-cell>
+        </ng-container>        
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+            <mat-cell *matCellDef = "let olympics">{{olympics.name}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="medals">
+                <mat-header-cell *matHeaderCellDef>Gold</mat-header-cell>
+                <mat-cell *matCellDef = "let olympics">{{olympics.medals.gold}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="silver">
+                <mat-header-cell *matHeaderCellDef>Silver</mat-header-cell>
+                <mat-cell *matCellDef = "let olympics">{{olympics.medals.silver}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="bronze">
+                <mat-header-cell *matHeaderCellDef>Bronze</mat-header-cell>
+                <mat-cell *matCellDef = "let olympics">{{olympics.medals.bronze}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="total">
+                <mat-header-cell *matHeaderCellDef>Total</mat-header-cell>
+                <mat-cell *matCellDef = "let olympics">{{olympics.medals.total}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+                <mat-header-cell  *matHeaderCellDef ></mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                     <button mat-button class="btn btn-primary"><i class="fa fa-heart-o"></i>&nbsp;Favorite</button>
+                </mat-cell>
+              </ng-container>
+        <mat-header-row *matHeaderRowDef = "displayedColumns" color = "primary"></mat-header-row>
+        <mat-row *matRowDef = "let row; columns: displayedColumns" (click)="onAddFav(row)"></mat-row>
+    </table>
+</div>
